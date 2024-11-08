@@ -5,8 +5,12 @@ namespace StarCounter
     public partial class Starcounter : Form
     {
         readonly int addrMarioAction = 0x33B17C;
-        readonly int[] victoryAction = { 0x1302, 0x1303, 0x1307 };
+
+        readonly int[] victoryAction = { 0x1303, 0x1904 };
+        readonly int deathAction = 0x1929;
+
         readonly int timeToSleep = 100;
+        
         readonly ProcessManager processManager = new ProcessManager();
 
         private int _prevMarioAction = 0;
@@ -23,10 +27,11 @@ namespace StarCounter
 
         private void timer_update_Tick(object sender, EventArgs e)
         {
-            bool success = int.TryParse(label_amountStars.Text, out int amountStars);
-            if (!success)
+            bool success_starcount = int.TryParse(label_amountStars.Text, out int amountStars);
+            bool success_deathcount = int.TryParse(label_amountDeaths.Text, out int amountDeaths);
+            if (!success_starcount || !success_deathcount)
             {
-                MessageBox.Show("Couldn't read Starnumber", null, MessageBoxButtons.CancelTryContinue, MessageBoxIcon.Error);
+                MessageBox.Show("Couldn't read Starnumber or Deathcount", null, MessageBoxButtons.CancelTryContinue, MessageBoxIcon.Error);
                 return;
             }
 
@@ -36,6 +41,11 @@ namespace StarCounter
             {
                 amountStars++;
                 label_amountStars.Text = amountStars.ToString();
+            }
+            else if (_currentMarioAction == deathAction && _prevMarioAction != _currentMarioAction)
+            {
+                amountDeaths++;
+                label_amountDeaths.Text = amountDeaths.ToString();
             }
 
         }
