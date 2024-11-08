@@ -7,7 +7,7 @@ namespace StarCounter
         readonly int addrMarioAction = 0x33B17C;
 
         readonly int[] victoryAction = { 0x1303, 0x1904 };
-        readonly int deathAction = 0x1929;
+        readonly int[] deathAction = { 0x1928, 0x1929 };
 
         readonly int timeToSleep = 100;
         
@@ -42,7 +42,7 @@ namespace StarCounter
                 amountStars++;
                 label_amountStars.Text = amountStars.ToString();
             }
-            else if (_currentMarioAction == deathAction && _prevMarioAction != _currentMarioAction)
+            else if (deathAction.Contains<int>(_currentMarioAction) && _prevMarioAction != _currentMarioAction)
             {
                 amountDeaths++;
                 label_amountDeaths.Text = amountDeaths.ToString();
