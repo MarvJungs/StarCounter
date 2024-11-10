@@ -2,7 +2,7 @@ using LiveSplit_Sync_Console;
 
 namespace StarCounter
 {
-    public partial class Starcounter : Form
+    public partial class Form_starcounter : Form
     {
         readonly int addrMarioAction = 0x33B17C;
 
@@ -14,9 +14,9 @@ namespace StarCounter
 
         private int _prevMarioAction = 0;
         private int _currentMarioAction = 0;
-        private ProcessManager _processManager;
+        private ProcessManager? _processManager;
 
-        public Starcounter()
+        public Form_starcounter()
         {
             InitializeComponent();
 
@@ -61,7 +61,7 @@ namespace StarCounter
             {
                 _processManager = new ProcessManager();
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 label_amountDeaths.Visible = false;
                 label_amountStars.Visible = false;
@@ -87,7 +87,7 @@ namespace StarCounter
                 MessageBox.Show("Couldn't read Starnumber", null, MessageBoxButtons.CancelTryContinue, MessageBoxIcon.Error);
                 return;
             }
-            label_amountStars.Text = (--amountStars).ToString();
+            label_amountStars.Text = (--amountStars < 0 ? 0 : amountStars).ToString();
         }
 
         private void button_reset_stars_Click(object sender, EventArgs e)
@@ -133,6 +133,16 @@ namespace StarCounter
                 return;
             }
             label_amountDeaths.Text = (++amountDeaths).ToString();
+        }
+
+        private void settingsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new Form_settings(this).ShowDialog();
+        }
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
