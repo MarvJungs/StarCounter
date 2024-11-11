@@ -144,5 +144,10 @@ namespace StarCounter
         {
             this.Close();
         }
+
+        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new Form_about().ShowDialog();
+        }
     }
 }
