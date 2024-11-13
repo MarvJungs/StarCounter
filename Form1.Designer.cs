@@ -57,33 +57,37 @@
             // 
             // pictureBox_star
             // 
+            pictureBox_star.BackgroundImageLayout = ImageLayout.Zoom;
             pictureBox_star.ErrorImage = null;
             pictureBox_star.Image = (Image)resources.GetObject("pictureBox_star.Image");
             pictureBox_star.InitialImage = null;
             pictureBox_star.Location = new Point(12, 83);
             pictureBox_star.Name = "pictureBox_star";
             pictureBox_star.Size = new Size(255, 255);
+            pictureBox_star.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox_star.TabIndex = 0;
             pictureBox_star.TabStop = false;
             // 
             // label_x_star
             // 
+            label_x_star.AutoSize = true;
             label_x_star.Font = new Font("Super Mario 256", 128.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label_x_star.Location = new Point(316, 162);
             label_x_star.Name = "label_x_star";
-            label_x_star.Size = new Size(133, 176);
+            label_x_star.Size = new Size(202, 170);
             label_x_star.TabIndex = 1;
             label_x_star.Text = "x";
             label_x_star.TextAlign = ContentAlignment.TopCenter;
             // 
             // label_amountStars
             // 
+            label_amountStars.AutoSize = true;
             label_amountStars.Font = new Font("Super Mario 256", 128.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label_amountStars.Location = new Point(520, 136);
             label_amountStars.Name = "label_amountStars";
-            label_amountStars.Size = new Size(597, 222);
+            label_amountStars.Size = new Size(452, 170);
             label_amountStars.TabIndex = 2;
-            label_amountStars.Text = "0";
+            label_amountStars.Text = "0000";
             label_amountStars.TextAlign = ContentAlignment.MiddleLeft;
             // 
             // timer_update
@@ -96,35 +100,38 @@
             pictureBox_death.Location = new Point(12, 373);
             pictureBox_death.Name = "pictureBox_death";
             pictureBox_death.Size = new Size(255, 256);
+            pictureBox_death.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox_death.TabIndex = 3;
             pictureBox_death.TabStop = false;
             // 
             // label_x_death
             // 
+            label_x_death.AutoSize = true;
             label_x_death.Font = new Font("Super Mario 256", 128.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label_x_death.Location = new Point(316, 418);
             label_x_death.Name = "label_x_death";
-            label_x_death.Size = new Size(133, 177);
+            label_x_death.Size = new Size(202, 170);
             label_x_death.TabIndex = 4;
             label_x_death.Text = "x";
             label_x_death.TextAlign = ContentAlignment.TopCenter;
             // 
             // label_amountDeaths
             // 
+            label_amountDeaths.AutoSize = true;
             label_amountDeaths.Font = new Font("Super Mario 256", 128.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label_amountDeaths.Location = new Point(520, 392);
             label_amountDeaths.Margin = new Padding(0, 0, 3, 0);
             label_amountDeaths.Name = "label_amountDeaths";
-            label_amountDeaths.Size = new Size(597, 222);
+            label_amountDeaths.Size = new Size(452, 170);
             label_amountDeaths.TabIndex = 5;
-            label_amountDeaths.Text = "0";
+            label_amountDeaths.Text = "0000";
             label_amountDeaths.TextAlign = ContentAlignment.MiddleLeft;
             // 
             // button_decrease_stars
             // 
             button_decrease_stars.BackColor = Color.Transparent;
             button_decrease_stars.BackgroundImage = (Image)resources.GetObject("button_decrease_stars.BackgroundImage");
-            button_decrease_stars.BackgroundImageLayout = ImageLayout.Stretch;
+            button_decrease_stars.BackgroundImageLayout = ImageLayout.Zoom;
             button_decrease_stars.ForeColor = SystemColors.ControlLight;
             button_decrease_stars.Location = new Point(12, 38);
             button_decrease_stars.Name = "button_decrease_stars";
@@ -136,7 +143,7 @@
             // button_increase_stars
             // 
             button_increase_stars.BackgroundImage = (Image)resources.GetObject("button_increase_stars.BackgroundImage");
-            button_increase_stars.BackgroundImageLayout = ImageLayout.Stretch;
+            button_increase_stars.BackgroundImageLayout = ImageLayout.Zoom;
             button_increase_stars.ImageAlign = ContentAlignment.TopLeft;
             button_increase_stars.Location = new Point(227, 38);
             button_increase_stars.Name = "button_increase_stars";
@@ -148,12 +155,14 @@
             // button_reset_stars
             // 
             button_reset_stars.BackColor = SystemColors.ControlLight;
+            button_reset_stars.BackgroundImageLayout = ImageLayout.Zoom;
+            button_reset_stars.Font = new Font("Super Mario 256", 32.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             button_reset_stars.ForeColor = SystemColors.ActiveCaptionText;
             button_reset_stars.Location = new Point(111, 38);
             button_reset_stars.Name = "button_reset_stars";
             button_reset_stars.Size = new Size(75, 28);
             button_reset_stars.TabIndex = 8;
-            button_reset_stars.Text = "Reset";
+            button_reset_stars.Text = "0";
             button_reset_stars.UseVisualStyleBackColor = false;
             button_reset_stars.Click += button_reset_stars_Click;
             // 
@@ -161,7 +170,7 @@
             // 
             button_decrease_deaths.BackColor = Color.Transparent;
             button_decrease_deaths.BackgroundImage = (Image)resources.GetObject("button_decrease_deaths.BackgroundImage");
-            button_decrease_deaths.BackgroundImageLayout = ImageLayout.Stretch;
+            button_decrease_deaths.BackgroundImageLayout = ImageLayout.Zoom;
             button_decrease_deaths.Location = new Point(12, 649);
             button_decrease_deaths.Name = "button_decrease_deaths";
             button_decrease_deaths.Size = new Size(60, 28);
@@ -172,19 +181,20 @@
             // button_reset_deaths
             // 
             button_reset_deaths.BackColor = SystemColors.ControlLight;
+            button_reset_deaths.BackgroundImageLayout = ImageLayout.Zoom;
             button_reset_deaths.ForeColor = SystemColors.ActiveCaptionText;
             button_reset_deaths.Location = new Point(111, 649);
             button_reset_deaths.Name = "button_reset_deaths";
             button_reset_deaths.Size = new Size(75, 28);
             button_reset_deaths.TabIndex = 10;
-            button_reset_deaths.Text = "Reset";
+            button_reset_deaths.Text = "0";
             button_reset_deaths.UseVisualStyleBackColor = false;
             button_reset_deaths.Click += button_reset_deaths_Click;
             // 
             // button_increase_deaths
             // 
             button_increase_deaths.BackgroundImage = (Image)resources.GetObject("button_increase_deaths.BackgroundImage");
-            button_increase_deaths.BackgroundImageLayout = ImageLayout.Stretch;
+            button_increase_deaths.BackgroundImageLayout = ImageLayout.Zoom;
             button_increase_deaths.ImageAlign = ContentAlignment.TopLeft;
             button_increase_deaths.Location = new Point(227, 649);
             button_increase_deaths.Name = "button_increase_deaths";
@@ -198,7 +208,7 @@
             menuStrip1.Items.AddRange(new ToolStripItem[] { fileToolStripMenuItem, settingsToolStripMenuItem, aboutToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(1139, 24);
+            menuStrip1.Size = new Size(1195, 24);
             menuStrip1.TabIndex = 12;
             menuStrip1.Text = "menuStrip1";
             // 
@@ -247,7 +257,7 @@
             AutoScaleDimensions = new SizeF(8F, 13F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ControlDarkDark;
-            ClientSize = new Size(1139, 689);
+            ClientSize = new Size(1195, 763);
             Controls.Add(button_increase_deaths);
             Controls.Add(button_reset_deaths);
             Controls.Add(button_decrease_deaths);
@@ -276,18 +286,7 @@
         }
 
         #endregion
-
-        private PictureBox pictureBox_star;
-        private Label label_x_star;
         private System.Windows.Forms.Timer timer_update;
-        private PictureBox pictureBox_death;
-        private Label label_x_death;
-        private Button button_decrease_stars;
-        private Button button_increase_stars;
-        private Button button_reset_stars;
-        private Button button_decrease_deaths;
-        private Button button_reset_deaths;
-        private Button button_increase_deaths;
         public Label label_amountStars;
         public Label label_amountDeaths;
         private MenuStrip menuStrip1;
@@ -297,5 +296,15 @@
         private ToolStripMenuItem exitToolStripMenuItem;
         private ToolStripMenuItem settingsToolStripMenuItem;
         private ToolStripMenuItem aboutToolStripMenuItem;
+        public PictureBox pictureBox_star;
+        public Label label_x_star;
+        public PictureBox pictureBox_death;
+        public Label label_x_death;
+        public Button button_decrease_stars;
+        public Button button_increase_stars;
+        public Button button_reset_stars;
+        public Button button_decrease_deaths;
+        public Button button_reset_deaths;
+        public Button button_increase_deaths;
     }
 }

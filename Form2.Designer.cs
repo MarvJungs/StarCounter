@@ -30,7 +30,7 @@
         {
             label_settings_header = new Label();
             label_settings_stars = new Label();
-            label1_settings_deaths = new Label();
+            label_settings_deaths = new Label();
             label_settings_stars_show = new Label();
             label_settings_stars_amount = new Label();
             checkBox_settings_show_stars = new CheckBox();
@@ -42,6 +42,9 @@
             button_settings_apply = new Button();
             button_settings_ok = new Button();
             label3 = new Label();
+            label_settings_layout = new Label();
+            label4 = new Label();
+            textBox_settings_fontsize = new TextBox();
             SuspendLayout();
             // 
             // label_settings_header
@@ -64,15 +67,15 @@
             label_settings_stars.TabIndex = 1;
             label_settings_stars.Text = "Stars";
             // 
-            // label1_settings_deaths
+            // label_settings_deaths
             // 
-            label1_settings_deaths.AutoSize = true;
-            label1_settings_deaths.Font = new Font("Super Mario 256", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1_settings_deaths.Location = new Point(17, 163);
-            label1_settings_deaths.Name = "label1_settings_deaths";
-            label1_settings_deaths.Size = new Size(88, 20);
-            label1_settings_deaths.TabIndex = 2;
-            label1_settings_deaths.Text = "Deaths";
+            label_settings_deaths.AutoSize = true;
+            label_settings_deaths.Font = new Font("Super Mario 256", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label_settings_deaths.Location = new Point(17, 163);
+            label_settings_deaths.Name = "label_settings_deaths";
+            label_settings_deaths.Size = new Size(88, 20);
+            label_settings_deaths.TabIndex = 2;
+            label_settings_deaths.Text = "Deaths";
             // 
             // label_settings_stars_show
             // 
@@ -153,7 +156,7 @@
             // 
             // button_settings_apply
             // 
-            button_settings_apply.Location = new Point(122, 326);
+            button_settings_apply.Location = new Point(122, 452);
             button_settings_apply.Name = "button_settings_apply";
             button_settings_apply.Size = new Size(132, 23);
             button_settings_apply.TabIndex = 11;
@@ -163,7 +166,7 @@
             // 
             // button_settings_ok
             // 
-            button_settings_ok.Location = new Point(23, 326);
+            button_settings_ok.Location = new Point(17, 452);
             button_settings_ok.Name = "button_settings_ok";
             button_settings_ok.Size = new Size(75, 23);
             button_settings_ok.TabIndex = 12;
@@ -176,18 +179,48 @@
             label3.AutoSize = true;
             label3.Font = new Font("Super Mario 256", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label3.ForeColor = Color.Firebrick;
-            label3.Location = new Point(17, 257);
+            label3.Location = new Point(17, 371);
             label3.MaximumSize = new Size(250, 0);
             label3.Name = "label3";
             label3.Size = new Size(226, 48);
             label3.TabIndex = 13;
             label3.Text = "Make sure to press \"Apply Settings\" when you are done!";
             // 
+            // label_settings_layout
+            // 
+            label_settings_layout.AutoSize = true;
+            label_settings_layout.Font = new Font("Super Mario 256", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label_settings_layout.Location = new Point(23, 290);
+            label_settings_layout.Name = "label_settings_layout";
+            label_settings_layout.Size = new Size(90, 20);
+            label_settings_layout.TabIndex = 14;
+            label_settings_layout.Text = "Layout";
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Location = new Point(39, 324);
+            label4.Name = "label4";
+            label4.Size = new Size(68, 13);
+            label4.TabIndex = 15;
+            label4.Text = "Fontsize";
+            // 
+            // textBox_settings_fontsize
+            // 
+            textBox_settings_fontsize.Location = new Point(186, 324);
+            textBox_settings_fontsize.Name = "textBox_settings_fontsize";
+            textBox_settings_fontsize.Size = new Size(68, 19);
+            textBox_settings_fontsize.TabIndex = 16;
+            textBox_settings_fontsize.Text = "128";
+            // 
             // Form_settings
             // 
             AutoScaleDimensions = new SizeF(8F, 13F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(266, 361);
+            ClientSize = new Size(266, 485);
+            Controls.Add(textBox_settings_fontsize);
+            Controls.Add(label4);
+            Controls.Add(label_settings_layout);
             Controls.Add(label3);
             Controls.Add(button_settings_ok);
             Controls.Add(button_settings_apply);
@@ -199,7 +232,7 @@
             Controls.Add(checkBox_settings_show_stars);
             Controls.Add(label_settings_stars_amount);
             Controls.Add(label_settings_stars_show);
-            Controls.Add(label1_settings_deaths);
+            Controls.Add(label_settings_deaths);
             Controls.Add(label_settings_stars);
             Controls.Add(label_settings_header);
             Font = new Font("Super Mario 256", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
@@ -215,7 +248,7 @@
 
         private Label label_settings_header;
         private Label label_settings_stars;
-        private Label label1_settings_deaths;
+        private Label label_settings_deaths;
         private Label label_settings_stars_show;
         private Label label_settings_stars_amount;
         private CheckBox checkBox_settings_show_stars;
@@ -227,5 +260,8 @@
         private Button button_settings_apply;
         private Button button_settings_ok;
         private Label label3;
+        private Label label_settings_layout;
+        private Label label4;
+        private TextBox textBox_settings_fontsize;
     }
 }
